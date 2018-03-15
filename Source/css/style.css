@@ -4,8 +4,8 @@ body
 	background-size: cover;
 	padding-top: 80px;
 
-	background: #ffd900;
-	color: #000000;	
+	background: #fdeb37;
+	color: #060606;	
 }
 
 h1
@@ -23,7 +23,7 @@ h2
 
 .navbar
 {
-	background: #10151d;
+	background: #000000;
 	min-height: 80px;
 	padding-top: 17px;
 }
@@ -37,11 +37,11 @@ div>ul.navbar-right
 }
 
 .navbar-inverse .navbar-brand {
-    color: #ffd900;
+    color: #fdeb37;
 }
 
 .navbar-inverse .navbar-nav>li>a {
-    color: #ffd900;
+    color: #fdeb37;
 }
 
 .navbar-header>a
@@ -112,7 +112,7 @@ hr.BlackTitleLine
 {
 	margin-top: 20px;
 	margin-bottom: 50px;
-	border: 2px solid #000000;
+	border: 2px solid #060606;
 	width: 60%;
 }
 
@@ -120,7 +120,7 @@ hr.YellowTitleLine
 {
 	margin-top: 20px;
 	margin-bottom: 50px;
-	border: 2px solid #ffd900;
+	border: 2px solid #fdeb37;
 	width: 60%;
 }
 
@@ -128,8 +128,8 @@ hr.YellowTitleLine
 {
 	padding: 0;
 	border-radius: 50%;
-	border: 5px solid #000000;
-	background: #000000;
+	border: 5px solid #060606;
+	background: #060606;
 }
 
 #project
@@ -142,8 +142,8 @@ hr.YellowTitleLine
 {
 	width:100%;
 	height: 100%;
-	border: 5px solid #ffd900;
-	background: #ffd900;
+	border: 5px solid #fdeb37;
+	background: #fdeb37;
 	border-radius: 5%;
 }
 
@@ -153,8 +153,8 @@ hr.YellowTitleLine
 	padding-top: 40px;
 	padding-bottom: 40px;
 
-	background: #ffd900;
-	color: #000000;
+	background: #fdeb37;
+	color: #060606;
 }
 
 #projectPictures {
@@ -167,13 +167,13 @@ hr.YellowTitleLine
 	padding-top: 40px;
 	padding-bottom: 40px;
 
-	background: #000000;
-	color: #ffd900;
+	background: #060606;
+	color: #fdeb37;
 }
 
 #DescriptionText
 {
-	border-left: 2px solid #000000;
+	border-left: 2px solid #060606;
 	border-radius: 3%;
 	padding-left: 20px;
 	text-align: left;
@@ -183,24 +183,24 @@ hr.YellowTitleLine
 .navbar-inverse .navbar-nav>.NavButton.active>a:focus, 
 .navbar-inverse .navbar-nav>.NavButton.active>a:hover
 {
-    color: #000000;
-    background-color: #ffd900;
+    color: #060606;
+    background-color: #fdeb37;
 }
 
 .navbar-inverse .navbar-nav>.NavButton a:focus
 {
-	color: #ffd900;
+	color: #fdeb37;
 }
 
 .logo
 {
-	color: #ffd900;
+	color: #fdeb37;
 }
 
 .logo:hover
 {
-	background-color: #ffd900;
-	color: #000000;
+	background-color: #fdeb37;
+	color: #060606;
 	border-radius: 5%;
 
 	padding-right: 10px;
@@ -214,14 +214,19 @@ hr.YellowTitleLine
 }
 
 .btn-success,
-.btn-send.disabled:hover {
-    color: #000000;
-    background-color: #ffd900;
+.btn-send.disabled:hover,
+.btn-send.disabled:active:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success:active:hover {
+    color: #060606;
+    background-color: #fdeb37;
     border-color: #ffc400;
 }
 
-.btn-success:hover {
-	color: #ffd900;
-    background-color: #000000;
+.btn-success:hover,
+.btn-success:active:focus {
+	color: #fdeb37;
+    background-color: #060606;
     border-color: #353535;
 }

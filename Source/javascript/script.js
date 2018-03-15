@@ -1,7 +1,3 @@
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
-
 $(function() {
   // This will select everything with the class smoothScroll
   // This should prevent problems with carousel, scrollspy, etc...
@@ -29,7 +25,7 @@ $(function() {
          // window.location.hash = $(this).attr('href').substring(1, $(this).attr('href').length);
           /* end ADDED */
         }); // The number here represents the speed of the scroll in milliseconds
-        return false;
+        return true;
       }
     }
   });
