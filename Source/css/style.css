@@ -212,3 +212,16 @@ hr.YellowTitleLine
 	text-align: center;
 	font-size: 1vmax;
 }
+
+.btn-success,
+.btn-send.disabled:hover {
+    color: #000000;
+    background-color: #ffd900;
+    border-color: #ffc400;
+}
+
+.btn-success:hover {
+	color: #ffd900;
+    background-color: #000000;
+    border-color: #353535;
+}
