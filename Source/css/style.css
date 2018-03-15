@@ -48,13 +48,13 @@ div>ul.navbar-right
 {
 	padding-top: 10px;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 2.8vmax;
     letter-spacing: 0.1em;
 }
 
 #letterName
 {
-	font-size: 1.8em;
+	font-size: 1.5em;
 }
 
 .thumbnail
@@ -66,13 +66,13 @@ div>ul.navbar-right
 
 #TitleText
 {
-	margin-left: 50px;
+	margin-left: 3vmax;
 }
 
 .SubTitle
 {
 	font-weight: 300;
-	font-size: 35px;
+	font-size: 4vmax;
 }
 
 p
@@ -88,7 +88,7 @@ p
 h1.TitleName
 {
 	margin-bottom: 0;
-	font-size: 60px;
+	font-size: 5vmax;
 	text-align: center;
 	white-space:nowrap;
 }
@@ -100,12 +100,12 @@ h1.TitleName
 
 #FirstTitle
 {
-	font-size: 80px;
+	font-size: 8vmax;
 }
 
 .thumbnail>h2
 {
-	font-size: 4em;
+	font-size: 4vmax;
 }
 
 hr.BlackTitleLine
@@ -210,7 +210,7 @@ hr.YellowTitleLine
 .iconSpan
 {
 	text-align: center;
-	font-size: 15px;
+	font-size: 1vmax;
 }
 
 .btn-success,
