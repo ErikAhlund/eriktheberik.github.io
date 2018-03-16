@@ -1,10 +1,15 @@
+html, body {
+	overflow-x: hidden;
+  }
+
 body
 {
 	font-family: 'Nunito Sans', sans-serif;
 	background-size: cover;
 	padding-top: 80px;
+	padding-left: 0;
+	padding-right: 0;
 
-	background: #fdeb37;
 	color: #060606;	
 }
 
@@ -48,7 +53,7 @@ div>ul.navbar-right
 {
 	padding-top: 10px;
     font-weight: 800;
-    font-size: 2.8vmax;
+    font-size: 2.8rem;
     letter-spacing: 0.1em;
 }
 
@@ -64,15 +69,10 @@ div>ul.navbar-right
 	text-align: center;
 }
 
-#TitleText
-{
-	margin-left: 3vmax;
-}
-
 .SubTitle
 {
 	font-weight: 300;
-	font-size: 4vmax;
+	font-size: 4rem;
 }
 
 p
@@ -88,9 +88,8 @@ p
 h1.TitleName
 {
 	margin-bottom: 0;
-	font-size: 5vmax;
+	font-size: 5rem;
 	text-align: center;
-	white-space:nowrap;
 }
 
 #AboutTitle
@@ -100,12 +99,12 @@ h1.TitleName
 
 #FirstTitle
 {
-	font-size: 8vmax;
+	font-size: 8rem;
 }
 
 .thumbnail>h2
 {
-	font-size: 4vmax;
+	font-size: 4rem;
 }
 
 hr.BlackTitleLine
@@ -210,7 +209,7 @@ hr.YellowTitleLine
 .iconSpan
 {
 	text-align: center;
-	font-size: 1vmax;
+	font-size: 1rem;
 }
 
 .btn-success,
