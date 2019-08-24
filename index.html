@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 		<title>Erik Ahlund | Games Are More Than Bits Of Code</title>
 		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,13 +32,13 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 		     	 	</button>
-					<a href="#Home" class="navbar-brand smoothScroll">
-						<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+					<a href="#Home" class="navbar-brand smoothScroll navbarName">
+						<span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
 						<span id="letterName">E</span>rik <span id="letterName">A</span>hlund
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-nav-demo">
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right navbarSections">
 						<li class="NavButton"><a class="smoothScroll" href="#Projects">Projects</a></li>
 						<li class="NavButton"><a class="smoothScroll" href="#About">About</a></li>
 						<li class="NavButton"><a class="smoothScroll" href="#Contact">Contact</a></li>
@@ -49,12 +49,12 @@
 		<div class="YellowZone" id="Home">
 			<div class="container">
 				<div class="row flex">
-					<div class="col-md-4 col-sm-12">
+					<div class="col-lg-4 col-sm-12">
 						<div class="thumbnail">
 							<img src="Assets/Erik.jpeg" id="profilePicture">
 						</div>
 					</div>
-					<div class="col-md-8 col-sm-12">
+					<div class="col-lg-8 col-sm-12">
 						<div class="thumbnail" id="TitleText">
 							<h1 class="TitleName" id="FirstTitle">Erik Ahlund</h1>
 							<hr class="BlackTitleLine">
@@ -122,39 +122,21 @@
 				</div>
 			</div>
 				<div class="row flex" id="DescriptionTexts">
-					<div class="col-md-4 col-sm-12">
-						<div class="thumbnail" id="DescriptionText">
-							<h2 class="SubTitle"><span id="letterName">P</span>ast</h2>
-							
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non est ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris varius ante egestas nulla pretium, ut tristique massa fermentum. Fusce quis malesuada augue. Praesent congue, ex at ultrices sodales, diam eros auctor elit, et convallis nulla diam sit amet urna. Donec nulla odio, efficitur ut lacinia id, blandit eget nunc.
-							</p>
-						</div>
+					<div class="col-lg-4 col-sm-12">
+						Having studied video game programming in one of the top universities for the field and worked for Ubisoft in the development of Assassin’s Creed Odyssey, I’ve learned that in software development, especially in game development, you’re going to do something you’ve never done before.
 					</div>
-					<div class="col-md-4 col-sm-12">
-						<div class="thumbnail" id="DescriptionText">
-							<h2 class="SubTitle"><span id="letterName">P</span>resent</h2>
-							
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non est ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris varius ante egestas nulla pretium, ut tristique massa fermentum. Fusce quis malesuada augue. Praesent congue, ex at ultrices sodales, diam eros auctor elit, et convallis nulla diam sit amet urna. Donec nulla odio, efficitur ut lacinia id, blandit eget nunc.
-							</p>
-						</div>
+					<div class="col-lg-4 col-sm-12">
+						I learned to excel at this. When developing our first 3d game (using our own 3D engine) at university we decided to make a hover racer called <a href="https://www.youtube.com/watch?v=1MgzsvItHiY" target="_blank">Vertigo Rush</a> (similar to Redout). The only problem was that we weren’t allowed to use a third-party physics engine, so I decided to develop my own physics engine in 1 week; I didn’t even know what a quaternion was before starting.
 					</div>
-					<div class="col-md-4 col-sm-12">
-						<div class="thumbnail" id="DescriptionText">
-							<h2 class="SubTitle"><span id="letterName">F</span>uture</h2>
-							
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non est ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris varius ante egestas nulla pretium, ut tristique massa fermentum. Fusce quis malesuada augue. Praesent congue, ex at ultrices sodales, diam eros auctor elit, et convallis nulla diam sit amet urna. Donec nulla odio, efficitur ut lacinia id, blandit eget nunc.
-							</p>
-						</div>
+					<div class="col-lg-4 col-sm-12">
+						After leaving Ubisoft I joined RealWorld Solutions, there I had to learn every day new things such as how to create and manage a server, how to create a lexer (tokenizer) and a parser for a custom scripting language, how to defend from possible XSS attacks or SQL injections, etc. I learned that challenges are what make me thrive. 
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="BlackZone" id="Contact">
 			<div class="container">
-				<form id="contact-form" method="POST" action="https://formspree.io/erik@ahlund.me" role="form">
+				<form id="contact-form" method="POST" action="https://formspree.io/erik@ahlund.me" target="_blank" role="form">
 				    <div class="messages"></div>
 				    <div class="controls">
 				        <div class="row">
@@ -199,17 +181,17 @@
 				<hr class="YellowTitleLine">
 				<div class="row flex" id="logos">
 					<div class="col-xs-4">
-						<a href="https://www.facebook.com/erik.ahlundhelguera">
+						<a href="https://www.facebook.com/erik.ahlundhelguera" target="_blank">
 							<p class="iconSpan"><i class="fab fa-facebook fa-10x logo"></i></p>
 						</a>
 					</div>
 					<div class="col-xs-4">
-						<a href="https://github.com/ErikTheBerik">
+						<a href="https://github.com/ErikTheBerik" target="_blank">
 							<p class="iconSpan"><i class="fab fa-github fa-10x logo"></i></p>
 						</a>
 					</div>
 					<div class="col-xs-4">
-						<a href="https://www.linkedin.com/in/erik-ahlund-helguera/">
+						<a href="https://www.linkedin.com/in/erik-ahlund-helguera/" target="_blank">
 							<p class="iconSpan"><i class="fab fa-linkedin fa-10x logo"></i></p>
 						</a>
 					</div>

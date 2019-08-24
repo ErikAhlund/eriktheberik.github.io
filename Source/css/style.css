@@ -5,8 +5,18 @@ html, body {
 :root {
   --background-color-1: #ffdd67;
   --background-color-2: #444444;
-  --font-color-1: #fefde5;
-  --font-color-2: #252525;
+  --font-color-1: #ffec9b;
+  --font-color-2: #303030;
+}
+
+@font-face {
+  font-family: TitleFont;
+  src: url("../../Assets/Fonts/Blackout.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: SubTitleFont;
+  src: url("../../Assets/Fonts/Intro.otf") format('truetype');
 }
 
 body
@@ -20,17 +30,52 @@ body
 	color: var(--font-color-2);	
 }
 
+body::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px var(--background-color-1);
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background-color: var(--background-color-2); 
+    background-image: -webkit-linear-gradient(45deg,
+                                              rgba(255, 255, 255, .2) 25%,
+                                              transparent 25%,
+                                              transparent 50%,
+                                              rgba(255, 255, 255, .2) 50%,
+                                              rgba(255, 255, 255, .2) 75%,
+                                              transparent 75%,
+                                              transparent)
+}
+
 h1
 {
 	font-weight: 800;
-	font-size: 50px;
+	font-size: 60px;
 	letter-spacing: 0.1em;
+	font-family: TitleFont;
+}
+
+.navbarName {
+	font-family: TitleFont;
 }
 
 h2
 {
 	font-weight: 300;
 	font-size: 30px;
+	font-family: SubTitleFont;
+}
+
+.navbarSections {
+	font-family: SubTitleFont;
 }
 
 .navbar
@@ -61,6 +106,7 @@ div>ul.navbar-right
     font-size: 2.8rem;
     letter-spacing: 0.1em;
 }
+
 
 #letterName
 {
@@ -159,6 +205,8 @@ hr.YellowTitleLine
 
 	background: var(--background-color-1);
 	color: var(--font-color-2);
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 #projectPictures {
@@ -173,14 +221,14 @@ hr.YellowTitleLine
 
 	background: var(--background-color-2);
 	color: var(--font-color-1);
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
-#DescriptionText
+#DescriptionTexts
 {
-	border-left: 2px solid var(--font-color-2);
-	border-radius: 3%;
-	padding-left: 20px;
-	text-align: left;
+	font-size: 18px;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .navbar-inverse .navbar-nav>.NavButton.active>a, 
