@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 		<script>!window.jQuery && document.write('<script type="text/javascript" src="Source/javascript/jquery-3.3.1.min.js"><\/script>')</script>
+		<script src="Source/javascript/jscolor.js"></script>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115809269-1"></script>
@@ -51,7 +52,7 @@
 				<div class="row flex">
 					<div class="col-lg-4 col-sm-12">
 						<div class="thumbnail">
-							<img src="Assets/Erik.jpeg" id="profilePicture">
+							<img class="img-fluid" src="Assets/Erik.jpeg" id="profilePicture">
 						</div>
 					</div>
 					<div class="col-lg-8 col-sm-12">
@@ -63,6 +64,14 @@
 					</div>
 				</div>
 			</div>
+			<nav class="navbar navbar-inverse navbar-fixed-bottom">
+				<ul class="nav navbar-nav navbar-center navbarSections">
+					<li>Background Color 1: <input class="jscolor {position:'bottom'}" value="ffffff" data-variable_name="--background-color-1"></li>
+					<li>Background Color 2: <input class="jscolor" value="ffffff" data-variable_name="--background-color-2"></li>
+					<li>Font Color 1: <input class="jscolor" value="ffffff" data-variable_name="--font-color-1"></li>
+					<li>Font Color 2: <input class="jscolor" value="ffffff" data-variable_name="--font-color-2"></li>
+				</ul>
+			</nav>
 		</div>
 
 		<div class="BlackZone" id="Projects">
@@ -72,42 +81,42 @@
 				<div class="row flex" id="projectPictures">
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="thumbnail" id="project">
-							<a href="VertigoRush.html"><img src="Assets/Projects/Vertigo.png" id="projectPicture"></a>
+							<a href="VertigoRush.html"><img class="img-fluid" src="Assets/Projects/Vertigo.png" id="projectPicture"></a>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="thumbnail" id="project">
-							<a href="TrialsOfKarak.html"><img src="Assets/Projects/Trials.png" id="projectPicture"></a>
+							<a href="TrialsOfKarak.html"><img class="img-fluid" src="Assets/Projects/Trials.png" id="projectPicture"></a>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="thumbnail" id="project">
-							<a href="HookedOnSpeed.html"><img src="Assets/Projects/Hooked_on_Speed.jpg" id="projectPicture"></a>
+							<a href="HookedOnSpeed.html"><img class="img-fluid" src="Assets/Projects/Hooked_on_Speed.jpg" id="projectPicture"></a>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="thumbnail" id="project">
-							<a href="DeliveringHaven.html"><img src="Assets/Projects/Delivering_Haven.jpg" id="projectPicture"></a>
+							<a href="DeliveringHaven.html"><img class="img-fluid" src="Assets/Projects/Delivering_Haven.jpg" id="projectPicture"></a>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="thumbnail" id="project">
-							<a href="Neonite.html"><img src="Assets/Projects/Neonite.jpg" id="projectPicture"></a>
+							<a href="Neonite.html"><img class="img-fluid" src="Assets/Projects/Neonite.jpg" id="projectPicture"></a>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="thumbnail" id="project">
-							<a href="SettlersOfHozanek.html"><img src="Assets/Projects/Hozanek.png" id="projectPicture"></a>
+							<a href="SettlersOfHozanek.html"><img class="img-fluid" src="Assets/Projects/Hozanek.png" id="projectPicture"></a>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="thumbnail" id="project">
-							<a href="ThePunchess.html"><img src="Assets/Projects/Punchess.jpg" id="projectPicture"></a>
+							<a href="ThePunchess.html"><img class="img-fluid" src="Assets/Projects/Punchess.jpg" id="projectPicture"></a>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="thumbnail" id="project">
-							<a href="ChuckSteele.html"><img src="Assets/Projects/Chuck_Steele.png" id="projectPicture"></a>
+							<a href="ChuckSteele.html"><img class="img-fluid" src="Assets/Projects/Chuck_Steele.png" id="projectPicture"></a>
 						</div>
 					</div>
 				</div>
@@ -116,20 +125,32 @@
 		<div class="YellowZone" id="About">
 			<div class="container">
 				<div class="row justify-content-start">
-				<div class="col-md-4 col-sm-12">
-					<h1 class="TitleName">About Me</h1>
-					<hr class="BlackTitleLine">
+					<div class="col-md-4 col-sm-12">
+						<h1 class="TitleName">About Me</h1>
+						<hr class="BlackTitleLine">
+					</div>
 				</div>
-			</div>
-				<div class="row flex" id="DescriptionTexts">
+				<div class="row flex AboutMeRow">
 					<div class="col-lg-4 col-sm-12">
-						Having studied video game programming in one of the top universities for the field and worked for Ubisoft in the development of Assassin’s Creed Odyssey, I’ve learned that in software development, especially in game development, you’re going to do something you’ve never done before.
+						<img class="img-thumbnail img-fluid" src="Assets/Erik.png" style="width: 100%;">
+						<br>
+						<br>
+						<p>
+							Having studied video game programming in one of the top universities for the field and worked for Ubisoft in the development of Assassin’s Creed Odyssey, I’ve learned that in software development, especially in game development, you’re going to do something you’ve never done before.
+						</p>
 					</div>
 					<div class="col-lg-4 col-sm-12">
-						I learned to excel at this. When developing our first 3d game (using our own 3D engine) at university we decided to make a hover racer called <a href="https://www.youtube.com/watch?v=1MgzsvItHiY" target="_blank">Vertigo Rush</a> (similar to Redout). The only problem was that we weren’t allowed to use a third-party physics engine, so I decided to develop my own physics engine in 1 week; I didn’t even know what a quaternion was before starting.
+						<p>
+							I learned to excel at this. When developing our first 3d game (using our own 3D engine) at university we decided to make a hover racer called <a href="https://www.youtube.com/watch?v=1MgzsvItHiY" target="_blank">Vertigo Rush</a> (similar to Redout). The only problem was that we weren’t allowed to use a third-party physics engine, so I decided to develop my own physics engine in 1 week; I didn’t even know what a quaternion was before starting.
+						</p>
+						<br>
+						<br>
+						<p>
+							After leaving Ubisoft I joined RealWorld Solutions, there I had to learn every day new things such as how to create and manage a server, how to create a lexer (tokenizer) and a parser for a custom scripting language, how to defend from possible XSS attacks or SQL injections, etc. I learned that challenges are what make me thrive. 
+						</p>				
 					</div>
 					<div class="col-lg-4 col-sm-12">
-						After leaving Ubisoft I joined RealWorld Solutions, there I had to learn every day new things such as how to create and manage a server, how to create a lexer (tokenizer) and a parser for a custom scripting language, how to defend from possible XSS attacks or SQL injections, etc. I learned that challenges are what make me thrive. 
+						
 					</div>
 				</div>
 			</div>

@@ -29,6 +29,19 @@ $(function() {
       }
     }
   });
+
+  $('.jscolor').each(function()
+  {
+    var variableName = $(this).data('variable_name');
+    var defaultColor = getComputedStyle(document.documentElement).getPropertyValue(variableName);
+    defaultColor = defaultColor.substr(1);
+    this.jscolor.fromString(defaultColor);
+
+    this.jscolor.onFineChange = function()
+    {
+      document.documentElement.style.setProperty(variableName, "#" + this);
+    }
+  });
 });
 
 $(function(){ 
