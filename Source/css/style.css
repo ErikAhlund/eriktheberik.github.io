@@ -286,3 +286,8 @@ p {
     background-color: var(--background-color-2);
     border-color: var(--font-color-2);
 }
+
+.colorData>li {
+	margin-left: 20px;
+	margin-right: 20px;
+}

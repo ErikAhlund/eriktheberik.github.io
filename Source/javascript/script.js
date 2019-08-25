@@ -1,3 +1,5 @@
+var defaultColors = [];
+
 $(function() {
   // This will select everything with the class smoothScroll
   // This should prevent problems with carousel, scrollspy, etc...
@@ -34,13 +36,24 @@ $(function() {
   {
     var variableName = $(this).data('variable_name');
     var defaultColor = getComputedStyle(document.documentElement).getPropertyValue(variableName);
-    defaultColor = defaultColor.substr(1);
+
+    defaultColors[variableName] = defaultColor;
     this.jscolor.fromString(defaultColor);
 
     this.jscolor.onFineChange = function()
     {
       document.documentElement.style.setProperty(variableName, "#" + this);
     }
+  });
+
+  $('#resetColors').click(function()
+  {
+    $('.jscolor').each(function()
+    {
+      var variableName = $(this).data('variable_name');
+      this.jscolor.fromString(defaultColors[variableName]);
+      this.jscolor.onFineChange();
+    });
   });
 });
 
