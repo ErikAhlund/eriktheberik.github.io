@@ -105,7 +105,7 @@ $(document).ready(function()
       modal.find('.modal-content').load("./projects/project_modal.html", function()
       {
         $('#ProjectTitle').html(data['Projects'][project]['Name']);
-        var iframeSrc = "https://www.youtube.com/embed/" + data['Projects'][project]['VideoId'] + "?enablejsapi=1&loop=1&modestbranding=1&iv_load_policy=3";
+        var iframeSrc = "https://www.youtube.com/embed/" + data['Projects'][project]['VideoId'] + "?enablejsapi=1&loop=1&modestbranding=1&iv_load_policy=3&rel=0";
         $('#ytplayer').attr('src', iframeSrc);
         $('#SmallText1').html(data['Projects'][project]['SmallText1']);
         $('#SmallText2').html(data['Projects'][project]['SmallText2']);
