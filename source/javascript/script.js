@@ -93,7 +93,7 @@ $(document).ready(function()
       return;
 
     var modal = $(this);
-    $.getJSON( "./Projects/project_data.json", function(data)
+    $.getJSON( "./projects/project_data.json", function(data)
     {
       modal.data('project', project);
       if (data['Projects'][project] == undefined)
