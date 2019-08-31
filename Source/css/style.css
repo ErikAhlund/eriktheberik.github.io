@@ -19,8 +19,32 @@ html, body {
   src: url("../../Assets/Fonts/Intro.otf") format('truetype');
 }
 
-body
-{
+.notfound .home-btn {
+	color: var(--background-color-1);
+	background: var(--background-color-2);
+	font-size: 14px;
+
+	font-family: 'SubTitleFont', sans-serif;
+	display: inline-block;
+	font-weight: 700;
+	text-decoration: none;
+	/*background-color: transparent;*/
+	border: 2px solid transparent;
+	text-transform: uppercase;
+	padding: 13px 25px;
+	font-size: 18px;
+	border-radius: 40px;
+	margin: 7px;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.notfound .home-btn.inverted {
+	color: var(--background-color-2);
+	background: var(--background-color-1);
+}
+
+body {
 	font-family: 'Nunito Sans', sans-serif;
 	background-size: cover;
 	padding-top: 80px;
@@ -30,20 +54,17 @@ body
 	color: var(--font-color-2);	
 }
 
-body::-webkit-scrollbar-track
-{
+body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px var(--background-color-1);
     background-color: #F5F5F5;
 }
 
-body::-webkit-scrollbar
-{
+body::-webkit-scrollbar {
     width: 10px;
     background-color: #F5F5F5;
 }
 
-body::-webkit-scrollbar-thumb
-{
+body::-webkit-scrollbar-thumb {
     background-color: var(--background-color-2); 
     background-image: -webkit-linear-gradient(45deg,
                                               rgba(255, 255, 255, .2) 25%,
@@ -55,8 +76,7 @@ body::-webkit-scrollbar-thumb
                                               transparent)
 }
 
-h1
-{
+h1 {
 	font-weight: 800;
 	font-size: 60px;
 	letter-spacing: 0.1em;
@@ -67,8 +87,7 @@ h1
 	font-family: TitleFont;
 }
 
-h2
-{
+h2 {
 	font-weight: 300;
 	font-size: 30px;
 	font-family: SubTitleFont;
@@ -79,15 +98,13 @@ h2
 	color: var(--font-color-1);
 }
 
-.navbar
-{
+.navbar {
 	background: var(--background-color-2);
 	min-height: 80px;
 	padding-top: 17px;
 }
 
-div>ul.navbar-right
-{
+div>ul.navbar-right {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 20px;
@@ -100,96 +117,80 @@ div>ul.navbar-right
     color: var(--font-color-1);
 }
 
-.navbar-header>a
-{
+.navbar-header>a {
 	padding-top: 10px;
     font-weight: 800;
     font-size: 2.8rem;
     letter-spacing: 0.1em;
 }
 
-#letterName
-{
+#letterName {
 	font-size: 1.5em;
 }
 
-.thumbnail
-{
+.thumbnail {
 	background: transparent;
 	border: none;
 	text-align: center;
 }
 
-.SubTitle
-{
+.SubTitle {
 	font-weight: 300;
 	font-size: 4rem;
 }
 
-p
-{
+p {
 	font-size: 15px;
 }
 
-#Home
-{
+#Home {
 	min-height: 95vh;
 }
 
-h1.TitleName
-{
+h1.TitleName {
 	margin-bottom: 0;
 	font-size: 5rem;
 	text-align: center;
 }
 
-#AboutTitle
-{
+#AboutTitle {
 	text-align: left;
 }
 
-#FirstTitle
-{
+#FirstTitle {
 	font-size: 8rem;
 }
 
-.thumbnail>h2
-{
+.thumbnail>h2 {
 	font-size: 4rem;
 }
 
-hr.BlackTitleLine
-{
+hr.BlackTitleLine {
 	margin-top: 20px;
 	margin-bottom: 50px;
 	border: 2px solid var(--font-color-2);
 	width: 60%;
 }
 
-hr.YellowTitleLine
-{
+hr.YellowTitleLine {
 	margin-top: 20px;
 	margin-bottom: 50px;
 	border: 2px solid var(--font-color-1);
 	width: 60%;
 }
 
-#profilePicture
-{
+#profilePicture {
 	padding: 0;
 	border-radius: 50%;
 	border: 10px solid var(--font-color-2);
 	background: var(--background-color-2);
 }
 
-#project
-{
-    height: 100%;
+.project {
     padding-bottom: 30px;
 }
 
-#projectPicture
-{
+.projectPicture {
 	width:100%;
 	height: 100%;
 	border: 5px solid var(--font-color-1);
@@ -198,8 +199,7 @@ hr.YellowTitleLine
 }
 
 
-.YellowZone
-{
+.YellowZone {
 	padding-top: 40px;
 	padding-bottom: 40px;
 
@@ -214,8 +214,7 @@ hr.YellowTitleLine
   flex-wrap: wrap;
 }
 
-.BlackZone
-{
+.BlackZone {
 	padding-top: 40px;
 	padding-bottom: 40px;
 
@@ -230,6 +229,31 @@ p {
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+.modal-header button.close {
+	font-size: 40px;
+	margin-top: -40px;
+	color: var(--font-color-2)
+}
+
+#youtubeContainer {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    left: 0;
+}
+#ytplayer {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+}
+
+#ModalText {
+	margin-top: -10%;
+}
+
 .img-thumbnail {
 	border-color: var(--font-color-2);
 	background-color: var(--font-color-2);
@@ -237,24 +261,20 @@ p {
 
 .navbar-inverse .navbar-nav>.NavButton.active>a, 
 .navbar-inverse .navbar-nav>.NavButton.active>a:focus, 
-.navbar-inverse .navbar-nav>.NavButton.active>a:hover
-{
+.navbar-inverse .navbar-nav>.NavButton.active>a:hover {
     color: var(--font-color-2);
     background-color: var(--background-color-1);
 }
 
-.navbar-inverse .navbar-nav>.NavButton a:focus
-{
+.navbar-inverse .navbar-nav>.NavButton a:focus {
 	color: var(--font-color-1);
 }
 
-.logo
-{
+.logo {
 	color: var(--font-color-1);
 }
 
-.logo:hover
-{
+.logo:hover {
 	background-color: var(--background-color-1);
 	color: var(--font-color-2);
 	border-radius: 5%;
@@ -263,8 +283,7 @@ p {
 	padding-left: 10px;
 }
 
-.iconSpan
-{
+.iconSpan {
 	text-align: center;
 	font-size: 1rem;
 }
