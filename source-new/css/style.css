@@ -11,12 +11,12 @@ html, body {
 
 @font-face {
   font-family: TitleFont;
-  src: url("../../Assets/Fonts/Blackout.ttf") format('truetype');
+  src: url("../../assets/fonts/Blackout.ttf") format('truetype');
 }
 
 @font-face {
   font-family: SubTitleFont;
-  src: url("../../Assets/Fonts/Intro.otf") format('truetype');
+  src: url("../../assets/fonts/Intro.otf") format('truetype');
 }
 
 .notfound .home-btn {
