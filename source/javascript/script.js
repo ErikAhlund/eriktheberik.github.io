@@ -81,18 +81,22 @@ $(function(){
 // Stop video when closing modal!
 $(document).ready(function()
 {
+
+  LoadProjects();
+
   $('#theModal').on('hidden.bs.modal', function ()
   {
     callPlayer('ytplayer', 'pauseVideo');
   });
 
-  $('#theModal').on('show.bs.modal', function (e)
+})
+
+  function LoadProjectModal(project)
   {
-    var project = $(e.relatedTarget).data('project');
-    if ($(this).data('project') == project)
+    var modal = $('#theModal');
+    if (modal.data('project') == project)
       return;
 
-    var modal = $(this);
     $.getJSON( "./projects/project_data.json", function(data)
     {
       modal.data('project', project);
@@ -112,9 +116,46 @@ $(document).ready(function()
         $('#SmallText3').html(data['Projects'][project]['SmallText3']);
       });
     });
-  });
+  };
 
-})
+function LoadProjects()
+{
+  // <div class="col-lg-4 col-md-6 col-sm-12">
+  //           <div class="thumbnail project">
+  //             <a href="" data-toggle="modal" data-target="#theModal" data-project="VertigoRush"><img class="img-fluid projectPicture" src="assets/projects/Vertigo.jpg"></a>
+  //           </div>
+  //         </div>
+
+  $.getJSON( "./projects/project_data.json", function(data)
+  {
+    $.each(data['Projects'], function(projectName, project)
+    {
+      var columnDiv = $(document.createElement('div'));
+      columnDiv.addClass('col-lg-4 col-md-6 col-sm-12');
+
+      var thumbnailDiv = $(document.createElement('div'));
+      thumbnailDiv.addClass('thumbnail project');
+
+      var openModal = $(document.createElement('a'));
+      openModal.attr('href', '');
+
+      openModal.click(function(e)
+      {
+        e.preventDefault();
+        $('#theModal').modal('toggle');
+
+        LoadProjectModal(projectName);
+      })
+
+      openModal.append('<img class="img-fluid projectPicture" src="assets/projects/' + project['Thumbnail'] + '">');
+
+      thumbnailDiv.append(openModal);
+      columnDiv.append(thumbnailDiv);
+
+      columnDiv.appendTo('#projectPictures');
+    });
+  });
+}
 
 function callPlayer(frame_id, func, args) {
     if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;

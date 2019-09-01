@@ -1,9 +1,19 @@
 {
     "Projects": 
     {
+        "ACOdyssey":
+        {
+            "Name": "Assassin's Creed Odyssey",
+            "Thumbnail": "ACO.jpg",
+            "VideoId": "s_SJZSAtLBA",
+            "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
+            "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
+            "SmallText3": "<p>I am testing some things. <br>This is the third paragraph</p>"
+        },
         "VertigoRush":
         {
             "Name": "Vertigo Rush",
+            "Thumbnail": "Vertigo.jpg",
             "VideoId": "1MgzsvItHiY",
             "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
             "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
@@ -12,6 +22,7 @@
         "TrialsOfKarakk":
         {
             "Name": "Trials Of Karakk",
+            "Thumbnail": "Trials.jpg",
             "VideoId": "_GYQtC8ilCk",
             "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
             "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
@@ -20,6 +31,7 @@
         "HookedOnSpeed":
         {
             "Name": "Hooked On Speed",
+            "Thumbnail": "Hooked_on_Speed.jpg",
             "VideoId": "vodVYrIHHtg",
             "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
             "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
@@ -28,6 +40,7 @@
         "DeliveringHaven":
         {
             "Name": "Delivering Haven",
+            "Thumbnail": "Delivering_Haven.jpg",
             "VideoId": "9HGS7KCIqUk",
             "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
             "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
@@ -36,6 +49,7 @@
         "Neonite":
         {
             "Name": "Neonite",
+            "Thumbnail": "Neonite.jpg",
             "VideoId": "i4LmcNZGy6A",
             "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
             "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
@@ -44,6 +58,7 @@
         "Hozanek":
         {
             "Name": "Settlers Of Hozanek",
+            "Thumbnail": "Hozanek.jpg",
             "VideoId": "ne2w0WHFcPQ",
             "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
             "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
@@ -52,6 +67,7 @@
         "ThePunchess":
         {
             "Name": "The Punchess",
+            "Thumbnail": "Punchess.jpg",
             "VideoId": "2TjE7sSXTZE",
             "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
             "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
@@ -60,6 +76,7 @@
         "ChuckSteel":
         {
             "Name": "Chuck Steel",
+            "Thumbnail": "Chuck_Steel.jpg",
             "VideoId": "wsWgh9ezQxw",
             "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
             "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",

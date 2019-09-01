@@ -3,10 +3,10 @@ html, body {
   }
 
 :root {
-  --background-color-1: #ffdd67;
-  --background-color-2: #444444;
-  --font-color-1: #ffec9b;
-  --font-color-2: #303030;
+  --background-color-1: #FFF5D6;
+  --background-color-2: #1C1C1C;
+  --font-color-1: #FFFFFF;
+  --font-color-2: #000000;
 }
 
 @font-face {
@@ -196,6 +196,7 @@ hr.YellowTitleLine {
 	border: 5px solid var(--font-color-1);
 	background: var(--background-color-1);
 	border-radius: 5%;
+	object-fit: cover;
 }
 
 
