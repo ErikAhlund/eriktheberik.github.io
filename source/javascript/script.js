@@ -55,18 +55,6 @@ $(function() {
       this.jscolor.onFineChange();
     });
   });
-
-  var offsetTop = $('#Skills').offset().top;
-  $(window).scroll(function() {
-  var height = $(window).height();
-  if($(window).scrollTop()+height > offsetTop) {
-    jQuery('.skillbar').each(function(){
-      jQuery(this).find('.skillbar-bar').animate({
-        width:jQuery(this).attr('data-percent')
-      },2000);
-    });
-  }
-  });
 });
 
 $(function(){ 
@@ -82,7 +70,7 @@ $(function(){
 $(document).ready(function()
 {
 
-  LoadProjects();
+  LoadJsonData();
 
   $('#theModal').on('hidden.bs.modal', function ()
   {
@@ -91,71 +79,127 @@ $(document).ready(function()
 
 })
 
-  function LoadProjectModal(project)
-  {
-    var modal = $('#theModal');
-    if (modal.data('project') == project)
-      return;
-
-    $.getJSON( "./projects/project_data.json", function(data)
-    {
-      modal.data('project', project);
-      if (data['Projects'][project] == undefined)
-      {
-        modal.find('.modal-content').load('./404.html #notfound');
-        return;
-      }
-
-      modal.find('.modal-content').load("./projects/project_modal.html", function()
-      {
-        $('#ProjectTitle').html(data['Projects'][project]['Name']);
-        var iframeSrc = "https://www.youtube.com/embed/" + data['Projects'][project]['VideoId'] + "?enablejsapi=1&loop=1&modestbranding=1&iv_load_policy=3&rel=0";
-        $('#ytplayer').attr('src', iframeSrc);
-        $('#SmallText1').html(data['Projects'][project]['SmallText1']);
-        $('#SmallText2').html(data['Projects'][project]['SmallText2']);
-        $('#SmallText3').html(data['Projects'][project]['SmallText3']);
-      });
-    });
-  };
-
-function LoadProjects()
+function LoadJsonData()
 {
-  // <div class="col-lg-4 col-md-6 col-sm-12">
-  //           <div class="thumbnail project">
-  //             <a href="" data-toggle="modal" data-target="#theModal" data-project="VertigoRush"><img class="img-fluid projectPicture" src="assets/projects/Vertigo.jpg"></a>
-  //           </div>
-  //         </div>
-
-  $.getJSON( "./projects/project_data.json", function(data)
+  $.getJSON( "./assets/website_data.json", function(data)
   {
-    $.each(data['Projects'], function(projectName, project)
-    {
-      var columnDiv = $(document.createElement('div'));
-      columnDiv.addClass('col-lg-4 col-md-6 col-sm-12');
-
-      var thumbnailDiv = $(document.createElement('div'));
-      thumbnailDiv.addClass('thumbnail project');
-
-      var openModal = $(document.createElement('a'));
-      openModal.attr('href', '');
-
-      openModal.click(function(e)
-      {
-        e.preventDefault();
-        $('#theModal').modal('toggle');
-
-        LoadProjectModal(projectName);
-      })
-
-      openModal.append('<img class="img-fluid projectPicture" src="assets/projects/' + project['Thumbnail'] + '">');
-
-      thumbnailDiv.append(openModal);
-      columnDiv.append(thumbnailDiv);
-
-      columnDiv.appendTo('#projectPictures');
-    });
+    LoadProjects(data);
+    LoadSkills(data);
   });
 }
+
+function LoadProjects(data)
+{
+  $.each(data['Projects'], function(projectName, project)
+  {
+    var columnDiv = $(document.createElement('div'));
+    columnDiv.addClass('col-lg-4 col-md-6 col-sm-12');
+
+    var thumbnailDiv = $(document.createElement('div'));
+    thumbnailDiv.addClass('thumbnail project');
+
+    var openModal = $(document.createElement('a'));
+    openModal.attr('href', '');
+
+    openModal.click(function(e)
+    {
+      e.preventDefault();
+      $('#theModal').modal('toggle');
+
+      LoadProjectModal(projectName, data);
+    })
+
+    openModal.append('<img class="img-fluid projectPicture" src="assets/projects/' + project['Thumbnail'] + '">');
+
+    thumbnailDiv.append(openModal);
+    columnDiv.append(thumbnailDiv);
+
+    columnDiv.appendTo('#projectPictures');
+  });
+}
+
+function LoadSkills(data)
+{
+  var languageSkills = data['Skills']['Languages'].sort(SkillCompare);
+  var otherSkills = data['Skills']['Other'].sort(SkillCompare);
+
+  var skillsDiv = $('#Skills');
+  
+  skillsDiv.append("<br>");
+  $.each(languageSkills, function(index, skill)
+  {
+    var skillbarDiv = CreateSkill(skill);
+    skillsDiv.append(skillbarDiv);
+  });
+
+  skillsDiv.append("<br><br>");
+  $.each(otherSkills, function(index, skill)
+  {
+    var skillbarDiv = CreateSkill(skill);
+    skillsDiv.append(skillbarDiv);
+  });
+
+  var offsetTop = $('#Skills').offset().top;
+  $(window).scroll(function() {
+  var height = $(window).height();
+  if($(window).scrollTop()+height > offsetTop) {
+    $('.skillbar').each(function(){
+      $(this).find('.skillbar-bar').animate({
+        width: $(this).data('percent')
+      },2000);
+    });
+  }
+  });
+  
+}
+
+function CreateSkill(skill)
+{
+  var skillbarDiv = $(document.createElement('div'));
+  skillbarDiv.addClass('skillbar clearfix');
+  skillbarDiv.data('percent', skill['Value'] + "%");
+
+  skillbarDiv.append('<span>' + skill['Name'] + '</span>');
+  skillbarDiv.append('<div class="skillbar-bar"></div>');
+  skillbarDiv.append('<div class="skill-bar-percent">' + skill['Value'] + "%" + '</div>');
+
+  return skillbarDiv;
+}
+
+function SkillCompare(a, b)
+{
+  if (a['Value'] > b['Value'])
+    return -1;
+
+  if (b['Value'] > a['Value'])
+    return 1;
+  
+  return 0;
+}
+
+function LoadProjectModal(project, data)
+{
+  var modal = $('#theModal');
+  if (modal.data('project') == project)
+    return;
+
+  modal.data('project', project);
+  if (data['Projects'][project] == undefined)
+  {
+    modal.find('.modal-content').load('./404.html #notfound');
+    return;
+  }
+
+  modal.find('.modal-content').load("./projects/project_modal.html", function()
+  {
+    $('#ProjectTitle').html(data['Projects'][project]['Name']);
+    var iframeSrc = "https://www.youtube.com/embed/" + data['Projects'][project]['VideoId'] + "?enablejsapi=1&loop=1&modestbranding=1&iv_load_policy=3&rel=0";
+    $('#ytplayer').attr('src', iframeSrc);
+    $('#SmallText1').html(data['Projects'][project]['SmallText1']);
+    $('#SmallText2').html(data['Projects'][project]['SmallText2']);
+    $('#SmallText3').html(data['Projects'][project]['SmallText3']);
+  });
+};
 
 function callPlayer(frame_id, func, args) {
     if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;

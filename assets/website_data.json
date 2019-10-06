@@ -1,0 +1,106 @@
+{
+    "Projects": 
+    {
+        "ACOdyssey":
+        {
+            "Name": "Assassin's Creed Odyssey",
+            "Thumbnail": "ACO.jpg",
+            "VideoId": "s_SJZSAtLBA",
+            "SmallText1": "<p>Worked with this game during my internship at Ubisoft. <br>This was my first triple A game.</p>",
+            "SmallText2": "<p>I was part of the dialogue team, where I worked with gameplay and tools.<br></p>",
+            "SmallText3": "<p>I made an algorithm to select animations in procedurally generated dialogues based on emotions and available transition animations.</p>"
+        },
+        "VertigoRush":
+        {
+            "Name": "Vertigo Rush",
+            "Thumbnail": "Vertigo.jpg",
+            "VideoId": "1MgzsvItHiY",
+            "SmallText1": "<p>First 3D game made with our own engine at The Game Assembly. <br>We had 8 weeks to make the engine and the game.</p>",
+            "SmallText2": "<p>Since we weren't allowed to use a physics engine, I made my own in 2 weeks in order to check collisions and make the hover cars float thanks to a 4 point thruster system.</p>",
+            "SmallText3": "<p>I also make the ghost replay system (there are 3 ghost cars + the players personal best ghost).<br>Also made the real time placement system aswell as the boosting system. </p>"
+        },
+        "TrialsOfKarakk":
+        {
+            "Name": "Trials Of Karakk",
+            "Thumbnail": "Trials.jpg",
+            "VideoId": "_GYQtC8ilCk",
+            "SmallText1": "<p>Second 3D game made with our own engine at The Game Assembly. <br>Game was inspired by <a href='https://www.youtube.com/watch?v=fVQNZFBvAck' target='_blank'>Furi</a><br>We had 8 weeks to further develop the 3D engine and finish the game.</p>",
+            "SmallText2": "<p>I created the pathfinding system and implemented some simple physics using the pathfinding triangle mesh. <br> Created the doors connecting the different rooms, which also connected the different pathfinding meshes.</p>",
+            "SmallText3": "<p>Was responsible for the scripting system. Connected lua functions to C++ engine functions.<br> I also created all the scripts for the 3 bosses following our Level Designers ideas.</p>"
+        },
+        "HookedOnSpeed":
+        {
+            "Name": "Hooked On Speed",
+            "Thumbnail": "Hooked_on_Speed.jpg",
+            "VideoId": "vodVYrIHHtg",
+            "SmallText1": "<p>Final game at The Game Assembly. <br>We wanted to create a competitive party game. We were heaviliy influenced by SpeedRunners.</p>",
+            "SmallText2": "<p>Once again I was responsible for the 2d physics engine. <br>This time I simplified the engine since we didn't want super realistic physics anyways.</p>",
+            "SmallText3": "<p>Worked with everything related with the physics such as the movement, wall hooks, wall jumps or boxes. <br>Worked a lot side by side with Level Designers to make the movement as good as possible.</p>"
+        },
+        "DeliveringHaven":
+        {
+            "Name": "Delivering Haven",
+            "Thumbnail": "Delivering_Haven.jpg",
+            "VideoId": "9HGS7KCIqUk",
+            "SmallText1": "<p>Third 3D game made with our own engine. <br>We had to make an FPS with local online coop (not split screen)</p>",
+            "SmallText2": "<p>Implemented the Bullet Physics engine into our engine. <br>Worked with network programming implementing the client/server communication via UDP.  </p>",
+            "SmallText3": "<p>I am testing some things. <br>This is the third paragraph</p>"
+        },
+        "Neonite":
+        {
+            "Name": "Neonite",
+            "Thumbnail": "Neonite.jpg",
+            "VideoId": "i4LmcNZGy6A",
+            "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
+            "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
+            "SmallText3": "<p>I am testing some things. <br>This is the third paragraph</p>"
+        },
+        "Hozanek":
+        {
+            "Name": "Settlers Of Hozanek",
+            "Thumbnail": "Hozanek.jpg",
+            "VideoId": "ne2w0WHFcPQ",
+            "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
+            "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
+            "SmallText3": "<p>I am testing some things. <br>This is the third paragraph</p>"
+        },
+        "ThePunchess":
+        {
+            "Name": "The Punchess",
+            "Thumbnail": "Punchess.jpg",
+            "VideoId": "2TjE7sSXTZE",
+            "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
+            "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
+            "SmallText3": "<p>I am testing some things. <br>This is the third paragraph</p>"
+        },
+        "ChuckSteel":
+        {
+            "Name": "Chuck Steel",
+            "Thumbnail": "Chuck_Steel.jpg",
+            "VideoId": "wsWgh9ezQxw",
+            "SmallText1": "<p>I am testing some things. <br>This is the first paragraph</p>",
+            "SmallText2": "<p>I am testing some things. <br>This is the second paragraph</p>",
+            "SmallText3": "<p>I am testing some things. <br>This is the third paragraph</p>"
+        }
+    },
+    "Skills":
+    {
+        "Languages":
+        [
+            { "Name": "C++", "Value": 100 },
+            { "Name": "C#", "Value": 70 },
+            { "Name": "HLSL/GLSL", "Value": 60 },
+            { "Name": "JavaScript", "Value": 90 },
+            { "Name": "PHP", "Value": 85 },
+            { "Name": "SQL", "Value": 80 },
+            { "Name": "LUA", "Value": 70 }
+        ],
+        "Other":
+        [
+            { "Name": "Physics", "Value": 85 },
+            { "Name": "Gameplay", "Value": 90 },
+            { "Name": "Graphics/Engine", "Value": 65 },
+            { "Name": "Tools", "Value": 70 }
+        ]
+    }
+}
