@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+		<title>Erik Ahlund | Games Are More Than Bits Of Code</title>
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="source/Bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="source/css/style.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<script>!window.jQuery && document.write('<script type="text/javascript" src="source/javascript/jquery-3.3.1.min.js"><\/script>')</script>
+		<script src="source/javascript/jscolor.js"></script>
+
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="81">
+    	<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+		     	 	</button>
+					<a href="#Home" class="navbar-brand smoothScroll navbarName">
+						<span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
+						<span class="letterName">E</span>rik <span class="letterName">A</span>hlund
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-nav-demo">
+					<ul class="nav navbar-nav navbar-right navbarSections">
+						<li class="NavButton"><a class="smoothScroll" href="#Projects">Projects</a></li>
+						<li class="NavButton"><a class="smoothScroll" href="#About">About</a></li>
+						<li class="NavButton"><a class="smoothScroll" href="#Contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="YellowZone" id="Home">
+			<div class="container">
+				<div class="row flex">
+					<div class="col-lg-4 col-sm-12">
+						<div class="thumbnail">
+							<img class="img-thumbnail img-fluid" src="assets/erik.jpg" style="width: 100%;">
+						</div>
+					</div>
+					<div class="col-lg-8 col-sm-12">
+						<div class="thumbnail" id="TitleText">
+							<h1 class="TitleName" id="FirstTitle">Erik Ahlund</h1>
+							<hr class="BlackTitleLine">
+							<h2>Games Are More<p><h2>Than Bits Of Code</h2></p></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Color navbar -->
+			<nav class="navbar navbar-inverse navbar-fixed-bottom">
+				<ul class="colorData nav navbar-nav navbar-center navbarSections">
+					<li>Background Color 1: <input class="jscolor {position:'bottom'}" value="ffffff" data-variable_name="--background-color-1"></li>
+					<li>Background Color 2: <input class="jscolor" value="ffffff" data-variable_name="--background-color-2"></li>
+					<li>Font Color 1: <input class="jscolor" value="ffffff" data-variable_name="--font-color-1"></li>
+					<li>Font Color 2: <input class="jscolor" value="ffffff" data-variable_name="--font-color-2"></li>
+					<li><button type="button" class="btn btn-success" id="resetColors">Reset</button></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="BlackZone" id="Projects">
+			<div class="container">
+				<h1 class="TitleName">Projects</h1>
+				<hr class="YellowTitleLine">
+				<div class="row flex" id="projectPictures">
+					<div id="theModal" class="modal fade text-center">
+					    <div class="modal-dialog modal-lg">
+			      			<div class="modal-content">
+					      	</div>
+				    	</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+		<div class="YellowZone" id="About">
+			<div class="container">
+				<div class="row justify-content-start">
+					<div class="col-md-4 col-sm-12">
+						<h1 class="TitleName">About Me</h1>
+						<hr class="BlackTitleLine">
+					</div>
+				</div>
+				<div class="row flex AboutMeRow">
+					<div class="col-lg-4 col-sm-12">
+						<p>
+							<span class="h1">H</span>aving studied video game programming in one of the top universities for the field and then worked for Ubisoft in the development of Assassin’s Creed Odyssey, I have learnt that in games development there are always new challenges and you constantly need to learn new things.
+						</p>
+						<br>
+						<br>
+						<p>
+							I really enjoy these challenges and I have come to realise that I’m very good at learning new complex things rapidly.
+							<br>
+							For example, when developing our first 3D game with our own 3D engine, we decided to build a hover racer called <a href="https://www.youtube.com/watch?v=1MgzsvItHiY" target="_blank">Vertigo Rush</a> (similar to Redout). The only problem was that we were not allowed to use a third-party physics engine, so I developed my own physics engine in just over a week. (Before this, I didn’t even know what a quaternion was!)
+						</p>
+					</div>
+					<div class="col-lg-4 col-sm-12">
+						<br>
+						<p>
+							At Ubisoft I worked as a gameplay programmer in the dialogue team. One of my main responsibilities was developing an algorithm to select idle animations, based on emotions, for procedural dialogues. I also worked directly with the writers and artists building various tools to simplify their workflow.
+						</p>
+						<br>
+						<br>						
+						<p>
+							Wanting to broaden my programming skills and learn more about dialogue systems, I joined the conversational AI start-up RealWorld Solutions. As lead developer I am designing, building and maintaining several systems such as a modal engine, a lexer and parser for a custom scripting language, a tool to visually create dialogues, etc.
+						</p>
+						<br>
+						<br>
+						<p>
+							The time at RealWorld Solutions is allowing me to expand my knowledge in areas such as managing databases, server-side scripting, integrating external applications via REST APIs, PHP and JavaScript and developing algorithms to analyse and tokenize strings.
+						</p>
+					</div>
+					<div class="col-lg-4 col-sm-12" id="Skills">
+						<h2 style="margin: 0;">Skills</h2>
+						<h3 style="margin-top: 0";>(Sorted by Comfort)</h3>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="BlackZone" id="Contact">
+			<div class="container">
+				<form id="contact-form" method="POST" action="https://formspree.io/erik@ahlund.me" target="_blank" role="form">
+				    <div class="messages"></div>
+				    <div class="controls">
+				        <div class="row">
+				            <div class="col-md-6">
+				                <div class="form-group">
+				                    <label for="form_name">Name *</label>
+				                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name" required="required" data-error="Name is required.">
+				                    <div class="help-block with-errors"></div>
+				                </div>
+							</div>
+							<div class="col-md-6">
+				                <div class="form-group">
+				                    <label for="form_email">Email *</label>
+				                    <input id="form_email" type="email" name="_replyto" class="form-control" placeholder="Please enter your email" required="required" data-error="Valid email is required.">
+				                    <div class="help-block with-errors"></div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="row">
+				            <div class="col-md-12">
+				                <div class="form-group">
+				                    <label for="form_message">Message *</label>
+				                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+				                    <div class="help-block with-errors"></div>
+				                </div>
+				            </div>
+				            <div class="col-md-12">
+				                <input type="submit" class="btn btn-success btn-send" value="Send message">
+				            </div>
+				        </div>
+				        <div class="row">
+				            <div class="col-md-12">
+				                <p>
+				                	<p class="text-muted"><strong>*</strong> These fields are required.</p>
+				                </p>
+			            	</div>
+			        	</div>
+		    		</div>
+				</form>
+				<br>
+				<hr class="YellowTitleLine">
+				<div class="row flex" id="logos">
+					<div class="col-xs-4">
+						<a href="https://www.facebook.com/erik.ahlundhelguera" target="_blank">
+							<p class="iconSpan"><i class="fab fa-facebook fa-10x logo"></i></p>
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a href="https://github.com/ErikTheBerik" target="_blank">
+							<p class="iconSpan"><i class="fab fa-github fa-10x logo"></i></p>
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a href="https://www.linkedin.com/in/erik-ahlund-helguera/" target="_blank">
+							<p class="iconSpan"><i class="fab fa-linkedin fa-10x logo"></i></p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="source/Bootstrap/js/bootstrap.js"></script>
+		<script src="source/javascript/script.js"></script>
+		<script src="source/javascript/validator.js"></script>
+	</body>
+</html>
+

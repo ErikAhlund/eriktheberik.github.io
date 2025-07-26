@@ -1,13 +1,15 @@
-html, body {
-	overflow-x: hidden;
-  }
-
 :root {
   --background-color-1: #FFF5D6;
   --background-color-2: #1C1C1C;
   --font-color-1: #FFFFFF;
   --font-color-2: #000000;
 }
+
+html, body {
+	overflow-x: hidden;
+	color: var(--background-color-2);
+	background: var(--background-color-1);
+  }
 
 @font-face {
   font-family: TitleFont;
@@ -124,7 +126,7 @@ div>ul.navbar-right {
     letter-spacing: 0.1em;
 }
 
-#letterName {
+.letterName {
 	font-size: 1.5em;
 }
 
@@ -206,7 +208,6 @@ hr.YellowTitleLine {
 
 	background: var(--background-color-1);
 	color: var(--font-color-2);
-	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
 
